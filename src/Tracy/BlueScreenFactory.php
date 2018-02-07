@@ -1,14 +1,12 @@
 <?php
 /**
- * This file is part of the Nella Project (https://monolog-tracy.nella.io).
- *
  * Copyright (c) Patrik Votoček (https://patrik.votocek.cz)
  *
  * For the full copyright and license information,
  * please view the file LICENSE.md that was distributed with this source code.
  */
 
-namespace Nella\MonologTracy\Tracy;
+namespace Driveto\MonologTracy\Tracy;
 
 use Tracy\BlueScreen;
 use Tracy\Debugger;
@@ -40,7 +38,7 @@ class BlueScreenFactory
 	public function registerInfo($text)
 	{
 		if (!is_string($text)) {
-			throw new \Nella\MonologTracy\Tracy\InfoMustBeStringException(gettype($text));
+			throw new \Driveto\MonologTracy\Tracy\InfoMustBeStringException(gettype($text));
 		}
 		if (in_array($text, $this->info, TRUE)) {
 			return;
@@ -58,7 +56,7 @@ class BlueScreenFactory
 			return;
 		}
 		if (!is_callable($callback, TRUE)) {
-			throw new \Nella\MonologTracy\Tracy\PanelIsNotCallableException();
+			throw new \Driveto\MonologTracy\Tracy\PanelIsNotCallableException();
 		}
 
 		$this->panels[] = $callback;
@@ -67,7 +65,7 @@ class BlueScreenFactory
 	public function registerCollapsePath($collapsePath)
 	{
 		if (!is_string($collapsePath)) {
-			throw new \Nella\MonologTracy\Tracy\CollapsePathMustBeStringException(gettype($collapsePath));
+			throw new \Driveto\MonologTracy\Tracy\CollapsePathMustBeStringException(gettype($collapsePath));
 		}
 
 		$this->collapsePaths[] = $collapsePath;

@@ -1,7 +1,5 @@
 <?php
 /**
- * This file is part of the Nella Project (https://monolog-tracy.nella.io).
- *
  * Copyright (c) 2014 Pavel Kučera (http://github.com/pavelkucera)
  * Copyright (c) Patrik Votoček (https://patrik.votocek.cz)
  *
@@ -9,11 +7,11 @@
  * please view the file LICENSE.md that was distributed with this source code.
  */
 
-namespace Nella\MonologTracy;
+namespace Driveto\MonologTracy;
 
 use Tracy\BlueScreen;
 
-class FactoryTest extends \Nella\MonologTracy\TestCase
+class FactoryTest extends \Driveto\MonologTracy\TestCase
 {
 
 	public function testBlueScreen()

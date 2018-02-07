@@ -1,6 +1,5 @@
 <?php
 /**
- * This file is part of the Nella Project (https://monolog-tracy.nella.io).
  *
  * Copyright (c) Patrik Votoček (https://patrik.votocek.cz)
  *
@@ -8,9 +7,9 @@
  * please view the file LICENSE.md that was distributed with this source code.
  */
 
-namespace Nella\MonologTracy\Tracy;
+namespace Driveto\MonologTracy\Tracy;
 
-class LoggerHelperTest extends \Nella\MonologTracy\TestCase
+class LoggerHelperTest extends \Driveto\MonologTracy\TestCase
 {
 
 	/** @var LoggerHelper */
@@ -36,7 +35,7 @@ class LoggerHelperTest extends \Nella\MonologTracy\TestCase
 	}
 
 	/**
-	 * @expectedException \Nella\MonologTracy\Tracy\NotSupportedException
+	 * @expectedException \Driveto\MonologTracy\Tracy\NotSupportedException
 	 */
 	public function testLog()
 	{
@@ -44,7 +43,7 @@ class LoggerHelperTest extends \Nella\MonologTracy\TestCase
 	}
 
 	/**
-	 * @expectedException \Nella\MonologTracy\Tracy\NotSupportedException
+	 * @expectedException \Driveto\MonologTracy\Tracy\NotSupportedException
 	 */
 	public function testDefaultMailer()
 	{
@@ -52,7 +51,7 @@ class LoggerHelperTest extends \Nella\MonologTracy\TestCase
 	}
 
 	/**
-	 * @expectedException \Nella\MonologTracy\Tracy\InvalidLogDirectoryException
+	 * @expectedException \Driveto\MonologTracy\Tracy\InvalidLogDirectoryException
 	 */
 	public function testInvalidLogDirectory()
 	{

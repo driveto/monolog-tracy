@@ -1,6 +1,5 @@
 <?php
 /**
- * This file is part of the Nella Project (https://monolog-tracy.nella.io).
  *
  * Copyright (c) Patrik Votoček (https://patrik.votocek.cz)
  *
@@ -8,11 +7,11 @@
  * please view the file LICENSE.md that was distributed with this source code.
  */
 
-namespace Nella\MonologTracy\Tracy;
+namespace Driveto\MonologTracy\Tracy;
 
 use Tracy\BlueScreen;
 
-class BlueScreenFactoryTest extends \Nella\MonologTracy\TestCase
+class BlueScreenFactoryTest extends \Driveto\MonologTracy\TestCase
 {
 
 	/** @var BlueScreenFactory */
@@ -26,7 +25,7 @@ class BlueScreenFactoryTest extends \Nella\MonologTracy\TestCase
 	}
 
 	/**
-	 * @expectedException \Nella\MonologTracy\Tracy\InfoMustBeStringException
+	 * @expectedException \Driveto\MonologTracy\Tracy\InfoMustBeStringException
 	 */
 	public function testRegisterInvalidInfo()
 	{
@@ -65,7 +64,7 @@ class BlueScreenFactoryTest extends \Nella\MonologTracy\TestCase
 	}
 
 	/**
-	 * @expectedException \Nella\MonologTracy\Tracy\PanelIsNotCallableException
+	 * @expectedException \Driveto\MonologTracy\Tracy\PanelIsNotCallableException
 	 */
 	public function testRegisterInvalidPanel()
 	{
@@ -102,7 +101,7 @@ class BlueScreenFactoryTest extends \Nella\MonologTracy\TestCase
 	}
 
 	/**
-	 * @expectedException \Nella\MonologTracy\Tracy\CollapsePathMustBeStringException
+	 * @expectedException \Driveto\MonologTracy\Tracy\CollapsePathMustBeStringException
 	 */
 	public function testRegisterInvalidCollapsePath()
 	{

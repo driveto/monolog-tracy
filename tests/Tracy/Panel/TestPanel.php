@@ -1,6 +1,5 @@
 <?php
 /**
- * This file is part of the Nella Project (https://monolog-tracy.nella.io).
  *
  * Copyright (c) 2014 Pavel Kučera (http://github.com/pavelkucera)
  * Copyright (c) Patrik Votoček (https://patrik.votocek.cz)
@@ -9,11 +8,11 @@
  * please view the file LICENSE.md that was distributed with this source code.
  */
 
-namespace Nella\MonologTracy\Tracy\Panel;
+namespace Driveto\MonologTracy\Tracy\Panel;
 
 use Tracy\Dumper;
 
-class TestPanel extends \Nella\MonologTracy\Tracy\Panel\Panel
+class TestPanel extends \Driveto\MonologTracy\Tracy\Panel\Panel
 {
 
 	/**
@@ -22,7 +21,7 @@ class TestPanel extends \Nella\MonologTracy\Tracy\Panel\Panel
 	 */
 	public function isSupported($exception)
 	{
-		if ($exception instanceof \Nella\MonologTracy\Tracy\Exception) {
+		if ($exception instanceof \Driveto\MonologTracy\Tracy\Exception) {
 			return TRUE;
 		}
 

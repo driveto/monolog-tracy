@@ -1,7 +1,5 @@
 <?php
 /**
- * This file is part of the Nella Project (https://monolog-tracy.nella.io).
- *
  * Copyright (c) 2014 Pavel Kučera (http://github.com/pavelkucera)
  * Copyright (c) Patrik Votoček (https://patrik.votocek.cz)
  *

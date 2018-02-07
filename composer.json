@@ -1,5 +1,5 @@
 {
-	"name": "nella/monolog-tracy",
+	"name": "driveto/monolog-tracy",
 	"description": "Tracy BlueScreen handler for Monolog",
 	"type": "library",
 	"keywords": ["Monolog", "Tracy", "log", "logging", "blue screen"],
@@ -17,17 +17,17 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/nella/monolog-tracy/issues",
-		"source": "https://github.com/nella/monolog-tracy"
+		"issues": "https://github.com/driveto/monolog-tracy/issues",
+		"source": "https://github.com/driveto/monolog-tracy"
 	},
 	"autoload": {
 		"psr-4": {
-			"Nella\\MonologTracy\\": "src/"
+			"Driveto\\MonologTracy\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Nella\\MonologTracy\\": "tests/"
+			"Driveto\\MonologTracy\\": "tests/"
 		}
 	},
 	"require": {

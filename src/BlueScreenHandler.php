@@ -18,16 +18,20 @@ class BlueScreenHandler extends \Monolog\Handler\AbstractProcessingHandler
 	/** @var LoggerHelper */
 	private $loggerHelper;
 
+	private $ignoredExceptions;
+
 	/**
 	 * @param LoggerHelper $loggerHelper
 	 * @param int $level
 	 * @param bool $bubble
+	 * @param array $ignoredExceptions
 	 */
-	public function __construct(LoggerHelper $loggerHelper, $level = Logger::DEBUG, $bubble = TRUE)
+	public function __construct(LoggerHelper $loggerHelper, $level = Logger::DEBUG, $bubble = TRUE, array $ignoredExceptions = [])
 	{
 		parent::__construct($level, $bubble);
 
 		$this->loggerHelper = $loggerHelper;
+		$this->ignoredExceptions = $ignoredExceptions;
 	}
 
 	/**
@@ -41,6 +45,12 @@ class BlueScreenHandler extends \Monolog\Handler\AbstractProcessingHandler
 			return;
 		}
 		$exception = $record['context']['exception'];
+
+		foreach ($this->ignoredExceptions as $ignoredClass) {
+			if ($exception instanceof $ignoredClass) {
+				return;
+			}
+		}
 
 		if (!file_exists($this->loggerHelper->getExceptionFile($exception))) {
 			$this->loggerHelper->renderToFile($exception);

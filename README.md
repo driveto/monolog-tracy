@@ -43,3 +43,17 @@ $logger->critical('Exception occured!', array(
     'exception' => new Exception(),
 ));
 ```
+
+To exclude exceptions from being logged, extend original configuration of [Monolog Tracy Bundle](https://github.com/nella/monolog-tracy-bundle):
+
+```yaml
+    nella.monolog_tracy.blue_screen_handler.default:
+        class: Driveto\MonologTracy\BlueScreenHandler
+        arguments:
+            $loggerHelper: '@nella.monolog_tracy.tracy.logger_helper'
+            $level: '%nella.monolog_tracy.blue_screen_handler.level%'
+            $bubble: '%nella.monolog_tracy.blue_screen_handler.bubble%'
+            $ignoredExceptions: [
+                'Symfony\Component\Security\Core\Exception\BadCredentialsException',
+                'Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException'
+                ]

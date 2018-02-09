@@ -4,13 +4,6 @@
 
 This is a fork of [monolog-tracy](https://github.com/nella/monolog-tracy) which allows you to define exceptions excluded from being saved into the file.
 
-## Installation
-
-Using  [Composer](http://getcomposer.org/):
-
-```sh
-$ composer require nella/monolog-tracy
-```
 
 ## Blue Screen Handler
 
